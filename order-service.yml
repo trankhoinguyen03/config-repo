@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/order_db
+    username: root
+    password: root
+  rabbitmq:
+    host: localhost
+    port: 5672
