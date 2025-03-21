@@ -22,10 +22,21 @@ spring:
     port: 5672
     username: guest
     password: guest
+spring:
+  application:
+    name: order-service
+server:
+  port: 8081
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: false
+    hostname: localhost
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
 management:
   endpoints:
     web:
