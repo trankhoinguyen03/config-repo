@@ -22,9 +22,6 @@ spring:
     port: 5672
     username: guest
     password: guest
-spring:
-  application:
-    name: order-service
 eureka:
   client:
     service-url:
