@@ -31,7 +31,6 @@ eureka:
   instance:
     prefer-ip-address: false
     hostname: localhost
-    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
 management:
   endpoints:
     web:
