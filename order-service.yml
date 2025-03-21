@@ -14,19 +14,9 @@ spring:
       enabled: true
   security:
     oauth2:
-      client:
-        registration:
-          order-service:
-            client-id: order-service
-            client-secret: cDdDnt9pJm572wSl48T0P5c3UmvcKpfm
-            authorization-grant-type: client_credentials
-          product-service:
-            client-id: product-service
-            client-secret: TGNMQ0PUiIQ4AViFTsuYGNUN10BsUnQV
-            authorization-grant-type: client_credentials
-        provider:
-          keycloak:
-            issuer-uri: http://localhost:8083/realms/microservices-realm
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8083/realms/microservices-realm
   rabbitmq:
     host: localhost
     port: 5672
