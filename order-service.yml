@@ -22,11 +22,18 @@ spring:
     port: 5672
     username: guest
     password: guest
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
 management:
   endpoints:
     web:
       exposure:
         include: prometheus, health, info
+  metrics:
+    tags:
+      application: order-service
   tracing:
     sampling:
       probability: 1.0
@@ -37,7 +44,3 @@ management:
     metrics:
       export:
         enabled: false
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka-server:8761/eureka/
